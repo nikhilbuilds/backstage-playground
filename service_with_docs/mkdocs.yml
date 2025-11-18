@@ -1,0 +1,8 @@
+site_name: Service with docs
+nav:
+  - Home: index.md
+
+plugins:
+  - techdocs-core
+
+docs_dir: docs   # optional, default is "docs"
