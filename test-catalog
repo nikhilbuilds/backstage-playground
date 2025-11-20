@@ -1,0 +1,30 @@
+apiVersion: scaffolder.backstage.io/v1beta3
+kind: Template
+metadata:
+  name: palladium-example-service
+  title: Palladium Example Service
+  description: Simple template for learning scaffolder
+spec:
+  owner: user:guest
+  type: service
+
+  parameters:
+    - title: Service Name
+      required:
+        - name
+      properties:
+        name:
+          type: string
+          description: Name of your service
+
+  steps:
+    - id: log
+      name: Log message
+      action: debug:log
+      input:
+        message: "Created service ${{ parameters.name }}"
+
+  output:
+    text:
+      - title: Result
+        text: "Template ran successfully for ${{ parameters.name }}"
